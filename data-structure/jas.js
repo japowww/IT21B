@@ -1,9 +1,9 @@
 import { studentName } from './name.js';
-import { studentAge } from './data-structure/age.js';
+import { studentAge } from './age.js';
 import { studentOccupation } from './occupation.js';
 import { studentMajor } from './major.js';
 
-// Person class with encapsulated private fields
+
 class Person {
     #name;
     #age;
@@ -28,7 +28,7 @@ class Person {
     }
 }
 
-// Student class that extends Person and adds a major
+
 class Student extends Person {
     constructor(name, age, occupation, major) {
         super(name, age, occupation);
@@ -39,21 +39,20 @@ class Student extends Person {
         return this.major;
     }
 
-    // Display student information
     displayInfo() {
-        return `Name: ${this.getName()}<br>
-                Age: ${this.getAge()}<br>
-                Occupation: ${this.getOccupation()}<br>
-                Major: ${this.getMajor()}`;
+        return `<strong>Name:</strong> ${this.getName()}<br>
+                <strong>Age:</strong> ${this.getAge()}<br>
+                <strong>Occupation:</strong> ${this.getOccupation()}<br>
+                <strong>Major:</strong> ${this.getMajor()}`;
     }
 }
 
-// Create a student instance using the imported values
+
 const student = new Student(studentName, studentAge, studentOccupation, studentMajor);
 
-// Display the student's information inside the div with id 'student-info'
+
 document.getElementById('student-info').innerHTML = student.displayInfo();
-console.log( `Name: ${studentName} `);
-console.log( `Name: ${studentAge} `);
-console.log( `Name: ${studentOccupation} `);
-console.log( `Name: ${studentMajor} `);
+console.log(`Name: ${studentName}`);
+console.log(`Name: ${studentAge}`);
+console.log(`Name: ${studentOccupation}`);
+console.log(`Name: ${studentMajor}`);
