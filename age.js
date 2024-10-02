@@ -1,0 +1,1 @@
+export const studentAge = 19;
